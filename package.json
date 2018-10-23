@@ -1,0 +1,19 @@
+{
+  "name": "prom2slack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": ""
+  },
+  "bin": "./",
+  "dependencies": {
+    "@slack/client": "^4.8.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.0",
+    "mocha": "^5.2.0",
+    "typescript": "^3.1.3"
+  }
+}
