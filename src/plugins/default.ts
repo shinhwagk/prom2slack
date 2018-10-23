@@ -1,13 +1,16 @@
 import { AlertSchema } from "../schema";
-import { MakeSlackTemplate, ASToMA } from "../tempalte"
+import { MakeSlackTemplate } from "../tempalte"
 
 const template = (as: AlertSchema) => {
+  var text = ""
+  for (const i in as.labels) {
+    const label = i
+    const value = as.labels[label]
+    text += `${label}: ${value}\n`
+  }
   return {
-    text: "<@> 111",
-    // text: as.annotations.description,
-    color: "danger",
-    // actions: [{ name: "chart-db_time", text: "Chart", type: "button", value: "zfjs" }],
-    // callback_id: "chart-db_time"
+    text: text,
+    color: "danger"
   }
 }
 

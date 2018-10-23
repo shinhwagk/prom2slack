@@ -9,7 +9,6 @@ import { ASToMA } from "./tempalte";
 const WEBHOOK_PORT = process.env.WEBHOOK_PORT || 8888;
 const WEBHOOK_EXTERNAL_URL = process.env.WEBHOOK_EXTERNAL_URL || "/alertmanager";
 
-
 const url: string = process.env.SLACK_WEBHOOK_URL || "";
 const webhook = new slack.IncomingWebhook(url);
 

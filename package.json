@@ -4,11 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": ""
+    "compile": "./node_modules/typescript/bin/tsc",
+    "publish": "compile && yarn publish",
+    "test": "compile && node lib/test/alertmanagermessage.js"
   },
   "bin": "./",
   "dependencies": {
-    "@slack/client": "^4.8.0"
+    "@slack/client": "^4.8.0",
+    "@types/request": "^2.47.1"
   },
   "devDependencies": {
     "@types/mocha": "^5.2.5",
